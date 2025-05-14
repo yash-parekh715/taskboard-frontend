@@ -76,6 +76,8 @@ The platform enables users to:
 > Free-tier hosting services (Vercel and Render) may introduce latency and cold-start delays that affect the application's responsiveness.
 > For optimal performance evaluation, running the application locally is recommended by following the instructions below.
 
+### Project Live Link: https://taskboard-eosin.vercel.app/
+
 ### 1. Clone the backend Repository - run locally
 
 ```bash
