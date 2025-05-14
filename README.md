@@ -196,10 +196,37 @@ The platform enables users to:
 > Free-tier hosting services (Vercel and Render) may introduce latency and cold-start delays that affect the application's responsiveness.
 > For optimal performance evaluation, running the application locally is recommended by following the instructions below.
 
-### 1. Backend Setup Instructions
+### 1. Clone the backend Repository - run locally
 
 ```bash
-git clone
-cd 
+git clone https://github.com/yash-parekh715/taskboard-backend.git
+cd taskboard-backend
 npm install
+```
+
+create a .env file with the variables
+
+- DATABASE_URL - url of the online/local postgres data base you want to use.
+- JWT_SECRET - secret key value
+
+```bash
+npx prisma migrate dev --name initial_migration
+npm run start
+```
+
+### 2. Clone the frontend Repository - run locally
+
+```bash
+git clone https://github.com/yash-parekh715/taskboard-frontend.git
+cd taskboard-frontend
+npm install
+```
+
+create a .env file with the variables
+
+- VITE_API_AUTH_URL - url for where your backend is hosted / listening for login, signup requests.
+- VITE_SOCKET_URL - url for where your socket interacts.
+
+```bash
+npm run dev
 ```
